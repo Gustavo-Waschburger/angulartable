@@ -1,0 +1,66 @@
+<div cdkMenuBar>
+  <button class="menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="file">HOME</button>
+  <button class="menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="edit">ARTIGOS</button>
+  <button class="menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="format">RECEITAS</button>
+</div>
+
+<ng-template #file>
+  <div class="menu" cdkMenu>
+    <button class="menu-item" cdkMenuItem>Share</button>
+    <hr />
+    <button class="menu-item" cdkMenuItem [cdkMenuTriggerFor]="new_doc">
+      New <span>&#10148;</span>
+    </button>
+    <button class="menu-item" cdkMenuItem>Open</button>
+    <button class="menu-item" cdkMenuItem>Make a Copy</button>
+    <hr />
+    <button class="menu-item" cdkMenuItem [cdkMenuTriggerFor]="download">
+      Download <span>&#10148;</span>
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #edit>
+  <div class="menu" cdkMenu>
+    <button class="menu-item" cdkMenuItem>Undo</button>
+    <button class="menu-item" cdkMenuItem>Redo</button>
+    <hr />
+    <button class="menu-item" cdkMenuItem>Cut</button>
+    <button class="menu-item" cdkMenuItem>Copy</button>
+    <button class="menu-item" cdkMenuItem>Paste</button>
+  </div>
+</ng-template>
+
+<ng-template #format >
+  <div class="menu" cdkMenu>
+    <div class="menu-group" cdkMenuGroup>
+      <button cdkMenuItemCheckbox class="menu-item" cdkMenuItemChecked>Bold</button>
+      <button cdkMenuItemCheckbox class="menu-item">Italic</button>
+    </div>
+    <hr />
+    <div class="menu-group" cdkMenuGroup>
+      <button cdkMenuItemRadio class="menu-item">Small</button>
+      <button cdkMenuItemRadio class="menu-item" cdkMenuItemChecked>Normal</button>
+      <button cdkMenuItemRadio class="menu-item">Big</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #new_doc>
+  <div class="menu" cdkMenu>
+    <button class="menu-item" cdkMenuItem>Document</button>
+    <button class="menu-item" cdkMenuItem>From template</button>
+    <hr />
+    <button class="menu-item" cdkMenuItem>Spreadsheet</button>
+    <button class="menu-item" cdkMenuItem>Presentation</button>
+    <button class="menu-item" cdkMenuItem>Form</button>
+  </div>
+</ng-template>
+
+<ng-template #download>
+  <div class="menu" cdkMenu>
+    <button class="menu-item" cdkMenuItem>Microsoft Word</button>
+    <button class="menu-item" cdkMenuItem>PDF</button>
+    <button class="menu-item" cdkMenuItem>Plain text</button>
+  </div>
+</ng-template>

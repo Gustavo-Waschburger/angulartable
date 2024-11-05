@@ -1,0 +1,15 @@
+<div [formGroup]="form">
+  <div>
+    <label>Endereço</label>
+    <input formControlName="address" />
+  </div>
+  <div>
+    <label>Cidade</label>
+    <input formControlName="country" />
+  </div>
+  
+  <div class="btns">
+    <button routerLink="../step-1">Voltar</button>
+    <button (click)="submit()">Enviar</button>
+  </div>
+</div>

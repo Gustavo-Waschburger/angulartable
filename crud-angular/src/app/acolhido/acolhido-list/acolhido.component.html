@@ -1,0 +1,27 @@
+<h1>Component ACOLHIDO FUNCIONANDO</h1>
+<table mat-table [dataSource]="acolhidos" class="mat-elevation-z8">
+
+  <!-- Coluna: Nome  -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> NOME </th>
+    <td mat-cell *matCellDef="let acolhido"> {{acolhido.nome}} </td>
+  </ng-container>
+
+  <!-- Coluna: E-mail -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> E-MAIL </th>
+    <td mat-cell *matCellDef="let acolhido"> {{acolhido.email}} </td>
+  </ng-container>
+
+  <!-- Coluna: Data Nascimento -->
+  <ng-container matColumnDef="dataNascimento">
+    <th mat-header-cell *matHeaderCellDef> DATA NASCIMENTO </th>
+    <td mat-cell *matCellDef="let acolhido"> {{acolhido.dataNascimento}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColums"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColums;"></tr>
+</table>
+
+

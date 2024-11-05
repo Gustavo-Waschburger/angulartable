@@ -1,0 +1,15 @@
+<div [formGroup]="form">
+  <div>
+    <label>Nome</label>
+    <input formControlName="firstName" />
+  </div>
+  <div>
+    <label>Último nome</label>
+    <input formControlName="lastName" />
+  </div>
+  <div>
+    <label>Data de Nascimento</label>
+    <input formControlName="birthDate" />
+  </div>
+  <button routerLink="../step-2">Próximo</button>
+</div>
